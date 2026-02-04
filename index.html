@@ -1,4 +1,9 @@
 
+Rozumím, upravíme to přímo v kódu. Odstranil jsem ten záporný okraj a nastavil jsem standardní mezeru. Zároveň jsem nechal logo dostatečně velké.
+
+Tady je upravený kód se vším měřením, kde je mezera pod logem vrácena do normálu:
+
+HTML
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -32,16 +37,16 @@
         body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 10px; background-color: #f0f4f8; }
         .container { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         
-        .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 5px; margin-bottom: 20px; }
+        .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 25px; }
         
-        /* EXTRÉMNĚ ZVĚTŠENÉ LOGO A MINIMÁLNÍ MEZERA */
+        /* LOGO S NORMALIZOVANOU MEZEROU */
         .logo-img { 
             display: block;
             margin: 0 auto;
             max-width: 100%; 
             height: auto; 
-            max-height: 500px; /* Výrazné zvětšení */
-            margin-bottom: -35px; /* Agresivní posun textu nahoru k logu */
+            max-height: 400px; 
+            margin-bottom: 15px; /* Přidána standardní mezera pod logo */
         }
         
         .contact-bar { background: #e9ecef; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 25px; border: 1px solid #dee2e6; }
@@ -74,7 +79,7 @@
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 40px 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.4em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); }
         
-        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; gap: 15px; } .logo-img { max-height: 250px; margin-bottom: -15px; } }
+        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; gap: 15px; } .logo-img { max-height: 250px; } }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -85,7 +90,7 @@
             <a href="/">
                 <img src="logukvyklizeni.png" alt="Úklid a Vyklízení Logo" class="logo-img">
             </a>
-            <div style="font-size: 0.9em; color: #666; text-transform: uppercase; font-weight: bold; margin-top: 0; letter-spacing: 1px;">Kadaň • Klášterec • Chomutov • Jirkov • Žatec • Podbořany</div>
+            <div style="font-size: 0.9em; color: #666; text-transform: uppercase; font-weight: bold; margin-top: 5px; letter-spacing: 1px;">Kadaň • Klášterec • Chomutov • Jirkov • Žatec • Podbořany</div>
         </header>
 
         <div class="contact-bar">
