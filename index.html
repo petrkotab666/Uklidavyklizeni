@@ -1,4 +1,10 @@
 
+Vložil jsem poslední vygenerovaný obrázek do vaší stávající struktury. Umístil jsem ho pod úvodní text a nad přehled služeb, aby vizuálně podpořil to, co nabízíte – tedy radikální změnu prostoru k lepšímu.
+
+Kód jsem mírně upravil tak, aby byl obrázek responzivní (přizpůsobil se šířce textu) a přidal jsem mu jemný stín, aby ladil s designem vaší stránky.
+
+Aktualizovaný kód stránky:
+HTML
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -22,6 +28,10 @@
         h2 { color: #0056b3; font-size: 1.4em; margin-top: 25px; display: flex; align-items: center; }
         h2::before { content: ""; display: inline-block; width: 10px; height: 25px; background: #28a745; margin-right: 12px; border-radius: 2px; }
         
+        /* Styl pro srovnávací obrázek */
+        .comparison-wrapper { text-align: center; margin: 30px 0; }
+        .comparison-img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+
         .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
         .service-box { background: #fdfdfd; border: 1px solid #eee; padding: 20px; border-radius: 10px; }
         .service-box h3 { margin-top: 0; color: #333; font-size: 1.1em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
@@ -30,7 +40,6 @@
         ul li { padding: 5px 0; font-size: 0.95em; }
         ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
-        /* Sekce prodej nemovitosti */
         .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
         .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
 
@@ -58,6 +67,10 @@
         <h1>Kompletní servis pro Vaši nemovitost</h1>
         
         <p>Jsme lokální specialisté na čistotu a pořádek. Ať už potřebujete vyklidit starou půdu, zajistit pravidelný úklid panelového domu nebo se přestěhovat do nového, jsme tu pro Vás.</p>
+
+        <div class="comparison-wrapper">
+            <img src="https://r.jina.ai/i/9e0066d71b3e40439f0321287e076711" alt="Ukázka vyklízení - před a po" class="comparison-img">
+        </div>
 
         <div class="service-grid">
             <div class="service-box">
