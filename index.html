@@ -7,19 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Úklid, Vyklízení a Čištění koberců | Kadaň, Klášterec, Žatec, Jirkov</title>
-    <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců v regionu od Stráže nad Ohří přes Kadaň až po Jirkov.">
+    <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců v regionu od Stráže nad Ohří přes Kadaň, Žatec a Podbořany až po Jirkov.">
     
+    <meta property="og:title" content="Úklid a vyklízení | Kadaňsko a Žatecko">
+    <meta property="og:description" content="Kompletní servis pro Vaši nemovitost.">
+    <meta property="og:image" content="favicon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 10px; background-color: #f0f4f8; }
         .container { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         
         .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 25px; }
-        .logo { font-size: 2.2em; font-weight: 700; color: #0056b3; letter-spacing: -1px; }
+        .logo-img { max-width: 120px; margin-bottom: 10px; }
+        .logo { font-size: 2.2em; font-weight: 700; color: #0056b3; letter-spacing: -1px; text-decoration: none; }
         .logo span { color: #28a745; }
         
-        .contact-bar { background: #e9ecef; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 25px; font-weight: bold; border: 1px solid #dee2e6; }
-        .contact-bar a { color: #0056b3; text-decoration: none; margin: 0 15px; font-size: 1.1em; }
+        .contact-bar { background: #e9ecef; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 25px; border: 1px solid #dee2e6; }
+        .contact-bar a { color: #0056b3; text-decoration: none; margin: 0 15px; font-size: 1.2em; font-weight: bold; display: inline-block; }
+        .contact-bar a:hover { text-decoration: underline; }
 
         h1 { color: #222; font-size: 1.7em; text-align: center; margin-bottom: 30px; }
         
@@ -28,29 +34,34 @@
 
         .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
         .service-box { padding: 25px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .service-box:hover { transform: translateY(-5px); }
+        .service-box:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .service-box h3 { margin-top: 0; font-size: 1.2em; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
         
-        /* Jednotlivé barvy pro boxy */
-        .box-cisteni { background-color: #e7f3ff; border-left: 5px solid #007bff; }
-        .box-uklid { background-color: #f0fff4; border-left: 5px solid #28a745; }
-        .box-vyklizeni { background-color: #fffaf0; border-left: 5px solid #fd7e14; }
-        .box-stehovani { background-color: #f8f9fa; border-left: 5px solid #6c757d; }
+        .box-cisteni { background-color: #e7f3ff; border-left: 6px solid #007bff; }
+        .box-uklid { background-color: #f0fff4; border-left: 6px solid #28a745; }
+        .box-vyklizeni { background-color: #fffaf0; border-left: 6px solid #fd7e14; }
+        .box-stehovani { background-color: #f8f9fa; border-left: 6px solid #6c757d; }
 
         ul { list-style: none; padding: 0; margin: 0; }
-        ul li { padding: 5px 0; font-size: 0.95em; display: flex; align-items: flex-start; }
-        ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 10px; }
+        ul li { padding: 6px 0; font-size: 0.95em; display: flex; align-items: flex-start; }
+        ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 12px; }
         
         .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
         .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
 
         .map-card-final { margin: 40px 0; background: #fff; border: 3px solid #0056b3; padding: 35px 20px; border-radius: 15px; text-align: center; }
-        .map-button-huge { display: block; background: #ffc107; color: #212529 !important; padding: 20px; text-decoration: none !important; border-radius: 10px; font-weight: 900; font-size: 1.4em; box-shadow: 0 5px 0 #d39e00; margin: 20px auto; max-width: 400px; text-transform: uppercase; }
+        .map-button-huge { display: block; background: #ffc107; color: #212529 !important; padding: 22px; text-decoration: none !important; border-radius: 10px; font-weight: 900; font-size: 1.4em; box-shadow: 0 5px 0 #d39e00; margin: 20px auto; max-width: 420px; text-transform: uppercase; transition: 0.1s; }
+        .map-button-huge:active { transform: translateY(3px); box-shadow: 0 2px 0 #d39e00; }
 
-        .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
-        .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
+        .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 40px 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
+        .cta-button { display: inline-block; background: #28a745; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.4em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); }
+        .cta-button:hover { background: #218838; transform: scale(1.05); }
         
-        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; } }
+        @media (max-width: 650px) { 
+            .service-grid { grid-template-columns: 1fr; } 
+            .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; gap: 15px; } 
+            .logo { font-size: 1.8em; }
+        }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -58,18 +69,18 @@
 
     <div class="container">
         <header class="header">
-            <div class="logo">ÚKLID <span>&</span> VYKLÍZENÍ</div>
-            <div style="font-size: 0.85em; color: #666; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Kadaň • Klášterec • Chomutov • Jirkov • Žatec • Podbořany</div>
+            <a href="/" class="logo">ÚKLID <span>&</span> VYKLÍZENÍ</a>
+            <div style="font-size: 0.85em; color: #666; text-transform: uppercase; font-weight: bold; margin-top: 8px; letter-spacing: 1px;">Kadaň • Klášterec • Chomutov • Jirkov • Žatec • Podbořany</div>
         </header>
 
         <div class="contact-bar">
-            📞 Tel: <a href="tel:+420603206308">603 206 308</a>
-            ✉️ <a href="mailto:info@vaseuklizecka.cz">info@vaseuklizecka.cz</a>
+            <a href="tel:+420603206308">📞 603 206 308</a>
+            <a href="mailto:info@vaseuklizecka.cz">✉️ info@vaseuklizecka.cz</a>
         </div>
 
         <h1>Kompletní servis pro Vaši nemovitost</h1>
         
-        <p>Jsme lokální specialisté. Působíme od <strong>Stráže n. Ohří přes Kadaň, Podbořany a Žatec až po Jirkov</strong>. Po domluvě však rádi přijedeme i dále.</p>
+        <p style="text-align: center; font-size: 1.1em;">Jsme lokální specialisté. Působíme od <strong>Stráže n. Ohří přes Kadaň, Podbořany a Žatec až po Jirkov</strong>. Po domluvě však rádi přijedeme i dále.</p>
 
         <div class="comparison-wrapper">
             <img src="vyklizenimistnosti.png" alt="Ukázka vyklízení - před a po" class="comparison-img">
@@ -100,7 +111,7 @@
                 <h3>📦 Vyklízení a Likvidace</h3>
                 <ul>
                     <li>Vyklízení bytů a pozůstalostí</li>
-                    <li>Odvoz starého nábytku na sběrný dvůr</li>
+                    <li>Odvoz starého nábytku do sběru</li>
                     <li>Likvidace sklepů, půd a garáží</li>
                     <li>Ekologická likvidace odpadu</li>
                 </ul>
@@ -131,10 +142,11 @@
             <a href="https://mapy.cz/zakladni?q=Kada%C5%88%20a%20okol%C3%AD" target="_blank" class="map-button-huge">
                 📍 Zobrazit mapu oblasti
             </a>
-            <p style="font-size: 0.9em; color: #666;">Po domluvě přijedeme i kamkoliv dále!</p>
+            <p style="font-size: 0.9em; color: #666; font-style: italic;">Po domluvě přijedeme i kamkoliv dále!</p>
         </div>
 
         <div class="cta-section">
+            <p style="margin-bottom: 25px; font-weight: bold;">Pro ceníky a online objednávky přejděte na náš hlavní web:</p>
             <a href="https://www.vaseuklizecka.cz" class="cta-button">VSTOUPIT NA VASEUKLIZECKA.CZ</a>
         </div>
     </div>
