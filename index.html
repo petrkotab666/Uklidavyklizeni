@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Úklid, Vyklízení a Čištění koberců | Kadaň, Klášterec, Žatec, Jirkov</title>
-    <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců či sedaček v regionu od Stráže nad Ohří po Jirkov, Žatec a Podbořany.">
+    <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců či sedaček v regionu od Stráže nad Ohří přes Kadaň, Žatec a Podbořany až po Jirkov.">
     <meta name="keywords" content="čištění koberců Kadaň, čištění sedaček Klášterec, vyklízení Kadaň, úklid Žatec, stěhování Jirkov, čištění čalounění">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -34,24 +34,43 @@
         ul li { padding: 5px 0; font-size: 0.95em; }
         ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
-        /* Box pro čištění koberců - zvýrazněný */
         .cleaning-special { background: #e7f3ff; border: 1px solid #b3d7ff; }
 
         .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
         .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
 
+        /* Zvýrazněná mapová vizitka */
         .map-card-final { 
             margin: 40px 0; 
-            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%); 
-            color: white; 
-            padding: 40px 20px; 
-            border-radius: 12px; 
+            background: #fff; 
+            border: 3px solid #0056b3; 
+            padding: 35px 20px; 
+            border-radius: 15px; 
             text-align: center; 
-            box-shadow: 0 10px 30px rgba(0,86,179,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
-        .map-card-final h2 { margin-top: 0; font-size: 1.8em; color: #fff; }
-        .city-tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px; }
-        .city-tag { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 50px; font-weight: bold; font-size: 0.85em; }
+        .map-card-final h2 { margin-top: 0; font-size: 1.8em; color: #0056b3; }
+        .city-tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 20px 0; }
+        .city-tag { background: #e9ecef; color: #333; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 0.85em; border: 1px solid #dee2e6; }
+
+        /* Super viditelné tlačítko mapy */
+        .map-button-huge { 
+            display: block; 
+            background: #ffc107; /* Výrazná žlutá */
+            color: #212529 !important; 
+            padding: 20px; 
+            text-decoration: none !important; 
+            border-radius: 10px; 
+            font-weight: 900; 
+            font-size: 1.4em;
+            transition: 0.3s;
+            box-shadow: 0 5px 0 #d39e00;
+            margin: 20px auto 10px;
+            max-width: 400px;
+            text-transform: uppercase;
+        }
+        .map-button-huge:hover { background: #ffca2c; transform: translateY(-2px); box-shadow: 0 7px 0 #d39e00; }
+        .map-button-huge:active { transform: translateY(2px); box-shadow: 0 2px 0 #d39e00; }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
@@ -75,7 +94,7 @@
 
         <h1>Kompletní servis pro Vaši nemovitost</h1>
         
-        <p>Jsme lokální specialisté na čistotu a pořádek. Působíme v celém regionu <strong>od Stráže nad Ohří až po Jirkov</strong>, včetně <strong>Žatce a Podbořan</strong>. Po domluvě však rádi přijedeme i kamkoliv dále.</p>
+        <p>Jsme lokální specialisté na čistotu a pořádek. Působíme v celém regionu <strong>od Stráže nad Ohří, přes Klášterec, Kadaň, Podbořany a Žatec až po Jirkov</strong>. Po domluvě však rádi přijedeme i kamkoliv dále.</p>
 
         <div class="comparison-wrapper">
             <img src="vyklizenimistnosti.png" alt="Ukázka vyklízení - před a po" class="comparison-img">
@@ -132,18 +151,22 @@
         </div>
 
         <div class="map-card-final">
-            <h2>Kde všude pomáháme?</h2>
-            <p>Hlavní oblastí je region mezi Stráží n. Ohří a Jirkovem, <strong>po domluvě však přijedeme i dále</strong>.</p>
+            <h2>Naše oblast působení</h2>
+            <p>Region od <strong>Stráže n. Ohří</strong> přes <strong>Kadaň, Podbořany a Žatec</strong> až po <strong>Jirkov</strong>.</p>
             <div class="city-tag-container">
-                <span class="city-tag">Stráž nad Ohří</span>
+                <span class="city-tag">Stráž n. O.</span>
                 <span class="city-tag">Klášterec</span>
                 <span class="city-tag">Kadaň</span>
+                <span class="city-tag">Podbořany</span>
+                <span class="city-tag">Žatec</span>
                 <span class="city-tag">Chomutov</span>
                 <span class="city-tag">Jirkov</span>
-                <span class="city-tag">Žatec</span>
-                <span class="city-tag">Podbořany</span>
             </div>
-            <a href="https://mapy.cz/zakladni?q=Kada%C5%88%20a%20okol%C3%AD" target="_blank" class="map-button-new">🗺️ OTEVŘÍT INTERAKTIVNÍ MAPU</a>
+            
+            <a href="https://mapy.cz/zakladni?q=Kada%C5%88%20a%20okol%C3%AD" target="_blank" class="map-button-huge">
+                📍 Zobrazit mapu oblasti
+            </a>
+            <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Po domluvě přijedeme i kamkoliv dále!</p>
         </div>
 
         <div class="cta-section">
