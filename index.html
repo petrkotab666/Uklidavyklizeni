@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vyklízení a úklid Kadaň | uklidavyklizeni.cz</title>
-    <meta name="description" content="Profesionální vyklízení bytů, sklepů a pozůstalostí v Kadani, Chomutově a okolí. Rychlá likvidace odpadu a následný úklid.">
+    <title>Úklid, Vyklízení a Stěhování Kadaň | uklidavyklizeni.cz</title>
+    <meta name="description" content="Profesionální úklidové a vyklízecí služby v Kadani a okolí. Realizujeme úklidy pro domácnosti, SVJ i firmy a nabízíme spolehlivé stěhování.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 10px; background-color: #f0f4f8; }
         .container { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         
-        /* Hlavička a Logo */
-        .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 30px; }
+        .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 25px; }
         .logo { font-size: 2.2em; font-weight: 700; color: #0056b3; letter-spacing: -1px; }
         .logo span { color: #28a745; }
         
-        .contact-bar { background: #e9ecef; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 20px; font-weight: bold; }
+        .contact-bar { background: #e9ecef; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 25px; font-weight: bold; border: 1px solid #dee2e6; }
         .contact-bar a { color: #0056b3; text-decoration: none; margin: 0 15px; }
 
-        h1 { color: #222; font-size: 1.8em; text-align: center; line-height: 1.3; }
-        h2 { color: #0056b3; margin-top: 30px; border-left: 5px solid #28a745; padding-left: 15px; }
+        h1 { color: #222; font-size: 1.7em; text-align: center; margin-bottom: 30px; }
+        h2 { color: #0056b3; font-size: 1.4em; margin-top: 25px; display: flex; align-items: center; }
+        h2::before { content: ""; display: inline-block; width: 10px; height: 25px; background: #28a745; margin-right: 12px; border-radius: 2px; }
         
-        /* Služby - ikony */
-        .services { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .services li::before { content: "✔️"; margin-right: 10px; }
+        /* Grid pro služby */
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+        .service-box { background: #fdfdfd; border: 1px solid #eee; padding: 20px; border-radius: 10px; }
+        .service-box h3 { margin-top: 0; color: #333; font-size: 1.1em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        ul { list-style: none; padding: 0; margin: 0; }
+        ul li { padding: 5px 0; font-size: 0.95em; }
+        ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
-        .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
-        .cta-button:hover { background: #218838; transform: scale(1.05); }
+        .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
+        .cta-button:hover { background: #218838; transform: translateY(-3px); }
         
-        @media (max-width: 600px) { .services { grid-template-columns: 1fr; } .logo { font-size: 1.6em; } }
+        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .logo { font-size: 1.6em; } }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -39,53 +44,72 @@
     <div class="container">
         <header class="header">
             <div class="logo">ÚKLID <span>&</span> VYKLÍZENÍ</div>
-            <div style="font-size: 0.9em; color: #666; text-transform: uppercase;">Profesionální služby pro region Kadaňsko</div>
+            <div style="font-size: 0.85em; color: #666; text-transform: uppercase; font-weight: bold; margin-top: 5px;">Kadaň • Klášterec • Chomutov • Žatec</div>
         </header>
 
         <div class="contact-bar">
-            📞 Tel: <a href="tel:+420603206308">603 206 308</a> ✉️ <a href="mailto:info@vaseuklizecka.cz">info@vaseuklizecka.cz</a>
+            📞 Tel: <a href="tel:+420777123456">777 123 456</a>
+            ✉️ <a href="mailto:info@vaseuklizecka.cz">info@vaseuklizecka.cz</a>
         </div>
 
-        <h1>Vyklízení nemovitostí a následný úklid v Kadani a okolí</h1>
+        <h1>Kompletní servis pro Vaši nemovitost</h1>
         
-        <p>Potřebujete uvolnit prostor, zbavit se starého harampádí nebo připravit byt k prodeji? Jsme <strong>místní firma z Kadaně</strong>. Naším cílem není jen vše vyhodit, ale zanechat po sobě čistý a k okamžitému použití připravený prostor.</p>
+        <p>Jsme lokální specialisté na čistotu a pořádek. Ať už potřebujete vyklidit starou půdu, zajistit pravidelný úklid panelového domu nebo se přestěhovat do nového, jsme tu pro Vás.</p>
 
-        <h2>Naše služby v terénu:</h2>
-        <ul class="services">
-            <li>Vyklízení pozůstalostí a bytů</li>
-            <li>Likvidace nábytku a spotřebičů</li>
-            <li>Čištění sklepů, půd a garáží</li>
-            <li>Odvoz stavební suti v pytlích</li>
-            <li>Demontáž kuchyňských linek</li>
-            <li>Vyklízení zahrad a chatek</li>
-            <li>Likvidace elektroodpadu</li>
-            <li>Kompletní úklid po vyklizení</li>
-        </ul>
+        <div class="service-grid">
+            <div class="service-box">
+                <h3>🧹 Profesionální Úklid</h3>
+                <ul>
+                    <li>Pravidelné úklidy pro <strong>SVJ a družstva</strong></li>
+                    <li>Úklid kanceláří a firemních prostor</li>
+                    <li>Generální úklidy domácností</li>
+                    <li>Mytí oken a čištění podlah</li>
+                </ul>
+            </div>
 
-        <h2>Lokalita působení:</h2>
-        <p>Působíme primárně ve městech: <strong>Kadaň, Klášterec nad Ohří, Chomutov, Jirkov, Žatec, Podbořany</strong> a ve všech přilehlých obcích.</p>
+            <div class="service-box">
+                <h3>📦 Vyklízení a Likvidace</h3>
+                <ul>
+                    <li>Vyklízení pozůstalostí a bytů</li>
+                    <li>Odvoz starého nábytku a suti</li>
+                    <li>Likvidace obsahu sklepů a půd</li>
+                    <li>Eko-likvidace elektroodpadu</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>🚚 Stěhovací služby</h3>
+                <ul>
+                    <li>Stěhování bytů a rodinných domů</li>
+                    <li>Převoz kusového nábytku</li>
+                    <li>Stěhování kanceláří a archivů</li>
+                    <li>Zajištění obalového materiálu</li>
+                </ul>
+            </div>
+
+            <div class="service-box" style="background: #eef9f1;">
+                <h3>🤝 Pro koho pracujeme?</h3>
+                <ul>
+                    <li>Domácnosti a majitelé domů</li>
+                    <li>SVJ, družstva a správci objektů</li>
+                    <li>Firmy, obchody a restaurace</li>
+                    <li>Realitní kanceláře</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="cta-section">
-            <p style="margin-bottom: 20px; font-size: 1.1em;"><strong>Potřebujete zjistit cenu nebo si objednat termín?</strong></p>
-            <a href="https://www.vaseuklizecka.cz" class="cta-button">VSTOUPIT NA HLAVNÍ WEB</a>
-            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Kompletní ceník a rezervační formulář najdete na vaseuklizecka.cz</p>
+            <p style="margin-bottom: 20px; font-size: 1.1em;"><strong>Podrobné informace, ceníky a objednávky:</strong></p>
+            <a href="https://www.vaseuklizecka.cz" class="cta-button">VSTOUPIT NA VASEUKLIZECKA.CZ</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Váš spolehlivý partner pro čistý domov i firmu.</p>
         </div>
     </div>
 
     <div class="footer">
         &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň<br>
-        Poctivé vyklízení a úklid na severu Čech.
+        Váš místní partner pro úklid, vyklízení a stěhování.
     </div>
 
 </body>
 </html>
-Proč je to takhle lepší?
-Větší důvěra: Jsou tam hned vidět kontakty (doplňte si své telefonní číslo).
-
-Moderní vzhled: Použití kulatých rohů, stínů a lepších barev (modrá/zelená evokuje čistotu).
-
-Adaptivní design: Na mobilu se text a seznam krásně srovnají pod sebe.
-
-Žádná chyba v logu: Textové logo v hlavičce (ÚKLID & VYKLÍZENÍ) bude mít vždy správnou diakritiku, protože ho vykresluje prohlížeč.
-
 Můžete tento kód zkopírovat do index.html. Už se vám mezitím v GitHubu u HTTPS objevilo to políčko na zaškrtnutí?
