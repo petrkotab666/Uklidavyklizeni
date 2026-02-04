@@ -7,7 +7,6 @@
     
     <title>Úklid, Vyklízení a Stěhování | Kadaň, Klášterec, Žatec, Jirkov</title>
     <meta name="description" content="Profesionální vyklízení a úklid v regionu od Stráže nad Ohří po Jirkov, Žatec a Podbořany. Vyklízení bytů, stěhování a úklidy pro SVJ i firmy.">
-    <meta name="keywords" content="vyklízení Kadaň, vyklízení Klášterec nad Ohří, vyklízení Žatec, vyklízení Jirkov, stěhování Podbořany, úklid Stráž nad Ohří">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -34,18 +33,34 @@
         ul li { padding: 5px 0; font-size: 0.95em; }
         ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
-        .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
-        .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
-
-        /* Styl pro mapu */
-        .map-container { margin: 40px 0; }
-        .map-section { height: 450px; border: 2px solid #0056b3; border-radius: 10px; overflow: hidden; position: relative; }
+        /* Nový styl pro mapovou vizitku */
+        .map-card { 
+            background: #0056b3; 
+            color: white; 
+            padding: 40px 20px; 
+            border-radius: 10px; 
+            text-align: center; 
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0,86,179,0.3);
+        }
+        .map-card h2 { margin-top: 0; color: white; }
+        .map-card p { font-size: 1.2em; margin-bottom: 25px; }
+        .map-link { 
+            display: inline-block; 
+            background: #fff; 
+            color: #0056b3; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+        .map-link:hover { background: #e9ecef; }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
-        .cta-button:hover { background: #218838; transform: translateY(-3px); }
         
-        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; } .logo { font-size: 1.6em; } }
+        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .logo { font-size: 1.6em; } }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -74,8 +89,8 @@
             <div class="service-box">
                 <h3>🧹 Profesionální Úklid</h3>
                 <ul>
-                    <li>Pravidelné úklidy pro <strong>SVJ a družstva</strong></li>
-                    <li>Úklid kanceláří a firem v regionu</li>
+                    <li>Pravidelné úklidy pro SVJ</li>
+                    <li>Úklid kanceláří a firem</li>
                     <li>Generální úklidy domácností</li>
                     <li>Mytí oken a hloubkové čištění</li>
                 </ul>
@@ -87,46 +102,16 @@
                     <li>Vyklízení pozůstalostí a bytů</li>
                     <li>Odvoz starého nábytku a suti</li>
                     <li>Likvidace sklepů a půd</li>
-                    <li>Eko-likvidace elektroodpadu</li>
+                    <li>Eko-likvidace odpadu</li>
                 </ul>
-            </div>
-
-            <div class="service-box">
-                <h3>🚚 Stěhovací služby</h3>
-                <ul>
-                    <li>Stěhování bytů a rodinných domů</li>
-                    <li>Převoz nábytku po celém kraji</li>
-                    <li>Stěhování kanceláří a archivů</li>
-                    <li>Zajištění obalového materiálu</li>
-                </ul>
-            </div>
-
-            <div class="service-box" style="background: #eef9f1;">
-                <h3>🤝 Pro koho pracujeme?</h3>
-                <ul>
-                    <li>Domácnosti a majitelé nemovitostí</li>
-                    <li>SVJ, družstva a správci objektů</li>
-                    <li>Firmy, obchody a restaurace</li>
-                    <li>Realitní kanceláře</li>
-                </ul>
-            </div>
-
-            <div class="real-estate-box">
-                <div>
-                    <strong>🏠 Chcete nemovitost po vyklizení rovnou prodat?</strong><br>
-                    Zajistíme kompletní realitní servis a prodej.
-                </div>
-                <a href="https://www.realitykadan.cz" target="_blank">Navštívit realitykadan.cz →</a>
             </div>
         </div>
 
-        <div class="map-container">
-            <div class="map-section">
-                <iframe style="border:none" src="https://frame.mapy.cz/s/puvoculapa" width="100%" height="450" frameborder="0"></iframe>
-            </div>
-            <div style="text-align: center; font-size: 0.9em; color: #444; margin-top: 10px; font-weight: bold;">
-                📍 Působíme v celém regionu od Stráže nad Ohří po Jirkov, po domluvě i dále.
-            </div>
+        <div class="map-card">
+            <h2>Kde působíme?</h2>
+            <p><strong>Stráž nad Ohří • Klášterec • Kadaň • Chomutov • Jirkov • Žatec • Podbořany</strong></p>
+            <p>A blízké okolí všech uvedených měst. Po domluvě i celá ČR.</p>
+            <a href="https://mapy.cz/zakladni?q=Kada%C5%88" target="_blank" class="map-link">📍 Otevřít mapu oblasti</a>
         </div>
 
         <div class="cta-section">
@@ -136,8 +121,7 @@
     </div>
 
     <div class="footer">
-        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň<br>
-        Váš místní partner pro úklid a vyklízení v severozápadních Čechách.
+        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň
     </div>
 
 </body>
