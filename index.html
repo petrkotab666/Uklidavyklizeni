@@ -1,5 +1,10 @@
 
 
+Omlouvám se, při úpravě stylu loga jsem omylem použil zkrácenou verzi obsahu. To byla moje chyba.
+
+Tady je kompletní verze se všemi původními texty, měřením konverzí a opraveným stylem pro vaše nové logo s přirozenou mezerou.
+
+HTML
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -35,14 +40,14 @@
         
         .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 25px; }
         
-        /* LOGO S NORMALIZOVANOU MEZEROU */
+        /* Styl loga s opravenou mezerou */
         .logo-img { 
             display: block;
             margin: 0 auto;
             max-width: 100%; 
             height: auto; 
-            max-height: 400px; 
-            margin-bottom: 15px; /* Přidána standardní mezera pod logo */
+            max-height: 380px; 
+            margin-bottom: 15px; 
         }
         
         .contact-bar { background: #e9ecef; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 25px; border: 1px solid #dee2e6; }
@@ -96,7 +101,7 @@
 
         <h1>Kompletní servis pro Vaši nemovitost</h1>
         
-        <p style="text-align: center; font-size: 1.1em;">Jsme lokální specialisté. Působíme od <strong>Stráže n. Ohří přes Kadaň až po Jirkov</strong>.</p>
+        <p style="text-align: center; font-size: 1.1em;">Jsme lokální specialisté na čistotu a pořádek. Působíme v celém regionu od <strong>Stráže nad Ohří přes Kadaň, Klášterec, Chomutov až po Jirkov a Žatec</strong>.</p>
 
         <div class="comparison-wrapper">
             <img src="vyklizenimistnosti.png" alt="Ukázka vyklízení - před a po" class="comparison-img">
@@ -106,32 +111,36 @@
             <div class="service-box box-cisteni">
                 <h3>✨ Čištění koberců a sedaček</h3>
                 <ul>
-                    <li>Hloubkové tepování koberců</li>
-                    <li>Čištění sedaček a křesel</li>
+                    <li>Hloubkové tepování a dezinfekce koberců</li>
+                    <li>Profesionální čištění sedaček, křesel a matrací</li>
+                    <li>Odstranění skvrn a nepříjemných pachů</li>
                 </ul>
             </div>
 
             <div class="service-box box-uklid">
                 <h3>🧹 Profesionální Úklid</h3>
                 <ul>
-                    <li>Pravidelné úklidy pro SVJ</li>
-                    <li>Úklid kanceláří a firem</li>
+                    <li>Pravidelné i jednorázové úklidy pro SVJ a firmy</li>
+                    <li>Generální úklidy domácností a mytí oken</li>
+                    <li>Úklid po malování nebo rekonstrukci</li>
                 </ul>
             </div>
 
             <div class="service-box box-vyklizeni">
                 <h3>📦 Vyklízení a Likvidace</h3>
                 <ul>
-                    <li>Vyklízení bytů a pozůstalostí</li>
-                    <li>Odvoz odpadu na sběrný dvůr</li>
+                    <li>Kompletní vyklízení bytů, domů i pozůstalostí</li>
+                    <li>Vyklízení sklepů, půd a zahradních domků</li>
+                    <li>Ekologická likvidace a odvoz na sběrný dvůr</li>
                 </ul>
             </div>
 
             <div class="service-box box-stehovani">
                 <h3>🚚 Stěhovací služby</h3>
                 <ul>
-                    <li>Stěhování bytů a rodinných domů</li>
-                    <li>Zápůjčka obalových materiálů</li>
+                    <li>Bezpečné stěhování bytů, domů i kanceláří</li>
+                    <li>Zápůjčka pevných obalových materiálů a krabic</li>
+                    <li>Montáž a demontáž nábytku našimi pracovníky</li>
                 </ul>
             </div>
 
@@ -143,14 +152,15 @@
 
         <div class="map-card-final">
             <h2>Naše oblast působení</h2>
+            <p>Přijedeme za Vámi kamkoliv v rámci Chomutovska a Kadaňska.</p>
             <a href="https://mapy.cz/zakladni?q=Kada%C5%88%20a%20okol%C3%AD" target="_blank" class="map-button-huge" onclick="trackAction('click_map', 'navigation');">
                 📍 Zobrazit mapu oblasti
             </a>
-            <p style="font-size: 0.9em; color: #666; font-style: italic;">Po domluvě přijedeme i kamkoliv dále!</p>
+            <p style="font-size: 0.9em; color: #666; font-style: italic;">Po předchozí domluvě realizujeme zakázky i ve vzdálenějších lokalitách.</p>
         </div>
 
         <div class="cta-section">
-            <p style="margin-bottom: 25px; font-weight: bold;">Pro ceníky a online objednávky přejděte na náš hlavní web:</p>
+            <p style="margin-bottom: 25px; font-weight: bold; font-size: 1.1em;">Pro detailní ceníky a online objednávkový formulář přejděte na náš hlavní web:</p>
             <a href="https://www.vaseuklizecka.cz" 
                onclick="trackAction('conversion_main_web', 'sales'); if(window.rc){window.rc.conversion({id: 1000000});}"
                class="cta-button">
@@ -160,7 +170,7 @@
     </div>
 
     <div class="footer">
-        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň
+        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň | Všechna práva vyhrazena.
     </div>
 
 </body>
