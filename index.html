@@ -1,10 +1,7 @@
 
-Abychom obešli problémy s blokováním standardních widgetů, připravil jsem pro vás interaktivní mapu přes Google Maps, která je pro tyto účely nejstabilnější a má nejlepší podporu v prohlížečích.
+Máte pravdu, při optimalizaci mapy mi z kódu vypadla sekce se stěhováním a odkazem na reality. Omlouvám se za nepozornost.
 
-Současně jsem upravil kód tak, aby mapa zabírala správný region od Stráže nad Ohří přes Kadaň až po Jirkov, Žatec a Podbořany.
-
-Kompletní aktualizovaný kód stránky:
-Vložte tento kód do svého souboru index.html na GitHubu.
+Zde je kompletní a opravený kód, který obsahuje vše: rozšířený seznam měst v hlavičce, správnou větu o působnosti (Stráž nad Ohří – Jirkov), všechny čtyři boxy služeb (včetně stěhování), žlutý box pro Reality Kadaň a interaktivní mapu.
 
 HTML
 <!DOCTYPE html>
@@ -15,6 +12,7 @@ HTML
     
     <title>Úklid, Vyklízení a Stěhování | Kadaň, Klášterec, Žatec, Jirkov</title>
     <meta name="description" content="Profesionální vyklízení a úklid v regionu od Stráže nad Ohří po Jirkov, Žatec a Podbořany. Vyklízení bytů, stěhování a úklidy pro SVJ i firmy.">
+    <meta name="keywords" content="vyklízení Kadaň, vyklízení Klášterec nad Ohří, vyklízení Žatec, vyklízení Jirkov, stěhování Podbořany, úklid Stráž nad Ohří">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -41,30 +39,26 @@ HTML
         ul li { padding: 5px 0; font-size: 0.95em; }
         ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
+        .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
+        .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
+
         /* Styl pro mapu */
         .map-section { margin: 40px 0; text-align: center; }
         .map-wrapper { 
             position: relative; 
-            padding-bottom: 56.25%; /* Poměr stran 16:9 */
+            padding-bottom: 50%; 
             height: 0; 
             overflow: hidden; 
             border-radius: 10px; 
             border: 2px solid #0056b3;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .map-wrapper iframe { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-        }
+        .map-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
         .cta-button:hover { background: #218838; transform: translateY(-3px); }
         
-        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .logo { font-size: 1.6em; } }
+        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; } .logo { font-size: 1.6em; } }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -93,8 +87,8 @@ HTML
             <div class="service-box">
                 <h3>🧹 Profesionální Úklid</h3>
                 <ul>
-                    <li>Pravidelné úklidy pro SVJ</li>
-                    <li>Úklid kanceláří a firem</li>
+                    <li>Pravidelné úklidy pro <strong>SVJ a družstva</strong></li>
+                    <li>Úklid kanceláří a firem v regionu</li>
                     <li>Generální úklidy domácností</li>
                     <li>Mytí oken a hloubkové čištění</li>
                 </ul>
@@ -106,22 +100,44 @@ HTML
                     <li>Vyklízení pozůstalostí a bytů</li>
                     <li>Odvoz starého nábytku a suti</li>
                     <li>Likvidace sklepů a půd</li>
-                    <li>Eko-likvidace odpadu</li>
+                    <li>Eko-likvidace elektroodpadu</li>
                 </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>🚚 Stěhovací služby</h3>
+                <ul>
+                    <li>Stěhování bytů a rodinných domů</li>
+                    <li>Převoz nábytku po celém kraji</li>
+                    <li>Stěhování kanceláří a archivů</li>
+                    <li>Zajištění obalového materiálu</li>
+                </ul>
+            </div>
+
+            <div class="service-box" style="background: #eef9f1;">
+                <h3>🤝 Pro koho pracujeme?</h3>
+                <ul>
+                    <li>Domácnosti a majitelé nemovitostí</li>
+                    <li>SVJ, družstva a správci objektů</li>
+                    <li>Firmy, obchody a restaurace</li>
+                    <li>Realitní kanceláře</li>
+                </ul>
+            </div>
+
+            <div class="real-estate-box">
+                <div>
+                    <strong>🏠 Chcete nemovitost po vyklizení rovnou prodat?</strong><br>
+                    Zajistíme kompletní realitní servis a prodej.
+                </div>
+                <a href="https://www.realitykadan.cz" target="_blank">Navštívit realitykadan.cz →</a>
             </div>
         </div>
 
         <div class="map-section">
             <div class="map-wrapper">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d161823.16104764832!2d13.27210214227303!3d50.38318182236104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1scs!2scz!4v1700000000000!5m2!1scs!2scz" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://frame.mapy.cz/s/puvoculapa" width="100%" height="400" frameborder="0"></iframe>
             </div>
-            <p style="margin-top: 15px; font-weight: bold; color: #0056b3;">📍 Oblast působení: Stráž nad Ohří – Kadaň – Jirkov – Žatec – Podbořany</p>
+            <p style="margin-top: 15px; font-weight: bold; color: #0056b3;">📍 Působíme od Stráže nad Ohří po Jirkov, Žatec a Podbořany.</p>
         </div>
 
         <div class="cta-section">
@@ -131,7 +147,8 @@ HTML
     </div>
 
     <div class="footer">
-        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň
+        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň<br>
+        Váš místní partner pro úklid a vyklízení v severozápadních Čechách.
     </div>
 
 </body>
