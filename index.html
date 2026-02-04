@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Úklid, Vyklízení a Stěhování | Kadaň, Klášterec, Žatec, Jirkov</title>
-    <meta name="description" content="Profesionální vyklízení a úklid v regionu od Stráže nad Ohří po Jirkov, Žatec a Podbořany. Vyklízení bytů, stěhování a úklidy pro SVJ i firmy.">
-    <meta name="keywords" content="vyklízení Kadaň, vyklízení Klášterec nad Ohří, vyklízení Žatec, vyklízení Jirkov, stěhování Podbořany, úklid Stráž nad Ohří">
+    <title>Úklid, Vyklízení a Čištění koberců | Kadaň, Klášterec, Žatec, Jirkov</title>
+    <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců či sedaček v regionu od Stráže nad Ohří po Jirkov, Žatec a Podbořany.">
+    <meta name="keywords" content="čištění koberců Kadaň, čištění sedaček Klášterec, vyklízení Kadaň, úklid Žatec, stěhování Jirkov, čištění čalounění">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -34,10 +34,12 @@
         ul li { padding: 5px 0; font-size: 0.95em; }
         ul li::before { content: "✓"; color: #28a745; font-weight: bold; margin-right: 8px; }
         
+        /* Box pro čištění koberců - zvýrazněný */
+        .cleaning-special { background: #e7f3ff; border: 1px solid #b3d7ff; }
+
         .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
         .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
 
-        /* Moderní mapová vizitka (CSS místo obrázku) */
         .map-card-final { 
             margin: 40px 0; 
             background: linear-gradient(135deg, #0056b3 0%, #003d80 100%); 
@@ -46,25 +48,10 @@
             border-radius: 12px; 
             text-align: center; 
             box-shadow: 0 10px 30px rgba(0,86,179,0.3);
-            border: 1px solid #004494;
         }
         .map-card-final h2 { margin-top: 0; font-size: 1.8em; color: #fff; }
-        .map-card-final p { font-size: 1.1em; margin-bottom: 25px; opacity: 0.9; }
-        .city-tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
-        .city-tag { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 50px; font-weight: bold; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.3); }
-        .map-button-new { 
-            display: inline-block; 
-            background: #28a745; 
-            color: white; 
-            padding: 15px 35px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            font-size: 1.1em;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .map-button-new:hover { background: #218838; transform: translateY(-2px); }
+        .city-tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        .city-tag { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 50px; font-weight: bold; font-size: 0.85em; }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
@@ -88,20 +75,30 @@
 
         <h1>Kompletní servis pro Vaši nemovitost</h1>
         
-        <p>Jsme lokální specialisté na čistotu a pořádek. Působíme v celém regionu <strong>od Stráže nad Ohří až po Jirkov</strong>, včetně <strong>Žatce a Podbořan</strong>. Po domluvě přijedeme i dále.</p>
+        <p>Jsme lokální specialisté na čistotu a pořádek. Působíme v celém regionu <strong>od Stráže nad Ohří až po Jirkov</strong>, včetně <strong>Žatce a Podbořan</strong>. Po domluvě však rádi přijedeme i kamkoliv dále.</p>
 
         <div class="comparison-wrapper">
             <img src="vyklizenimistnosti.png" alt="Ukázka vyklízení - před a po" class="comparison-img">
         </div>
 
         <div class="service-grid">
+            <div class="service-box cleaning-special">
+                <h3>✨ Čištění koberců a sedaček</h3>
+                <ul>
+                    <li>Hloubkové čištění koberců</li>
+                    <li>Tepování sedaček a křesel</li>
+                    <li>Čištění čalouněného nábytku</li>
+                    <li>Odstranění skvrn a pachů</li>
+                </ul>
+            </div>
+
             <div class="service-box">
                 <h3>🧹 Profesionální Úklid</h3>
                 <ul>
-                    <li>Pravidelné úklidy pro <strong>SVJ a družstva</strong></li>
-                    <li>Úklid kanceláří a firem v regionu</li>
+                    <li>Pravidelné úklidy pro SVJ</li>
+                    <li>Úklid kanceláří a firem</li>
                     <li>Generální úklidy domácností</li>
-                    <li>Mytí oken a hloubkové čištění</li>
+                    <li>Mytí oken a výloh</li>
                 </ul>
             </div>
 
@@ -111,27 +108,17 @@
                     <li>Vyklízení pozůstalostí a bytů</li>
                     <li>Odvoz starého nábytku a suti</li>
                     <li>Likvidace sklepů a půd</li>
-                    <li>Eko-likvidace elektroodpadu</li>
+                    <li>Eko-likvidace odpadu</li>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>🚚 Stěhovací služby</h3>
                 <ul>
-                    <li>Stěhování bytů a rodinných domů</li>
-                    <li>Převoz nábytku po celém kraji</li>
-                    <li>Stěhování kanceláří a archivů</li>
-                    <li>Zajištění obalového materiálu</li>
-                </ul>
-            </div>
-
-            <div class="service-box" style="background: #eef9f1;">
-                <h3>🤝 Pro koho pracujeme?</h3>
-                <ul>
-                    <li>Domácnosti a majitelé nemovitostí</li>
-                    <li>SVJ, družstva a správci objektů</li>
-                    <li>Firmy, obchody a restaurace</li>
-                    <li>Realitní kanceláře</li>
+                    <li>Stěhování bytů a domů</li>
+                    <li>Převoz nábytku po kraji</li>
+                    <li>Stěhování kanceláří</li>
+                    <li>Obalový materiál v ceně</li>
                 </ul>
             </div>
 
@@ -145,11 +132,11 @@
         </div>
 
         <div class="map-card-final">
-            <h2>Naše oblast působení</h2>
-            <p>Přijedeme za Vámi kamkoliv v tomto regionu:</p>
+            <h2>Kde všude pomáháme?</h2>
+            <p>Hlavní oblastí je region mezi Stráží n. Ohří a Jirkovem, <strong>po domluvě však přijedeme i dále</strong>.</p>
             <div class="city-tag-container">
                 <span class="city-tag">Stráž nad Ohří</span>
-                <span class="city-tag">Klášterec nad Ohří</span>
+                <span class="city-tag">Klášterec</span>
                 <span class="city-tag">Kadaň</span>
                 <span class="city-tag">Chomutov</span>
                 <span class="city-tag">Jirkov</span>
@@ -166,8 +153,7 @@
     </div>
 
     <div class="footer">
-        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň<br>
-        Váš místní partner pro úklid a vyklízení v severozápadních Čechách.
+        &copy; 2026 uklidavyklizeni.cz | Provozuje Vaše Uklízečka Kadaň
     </div>
 
 </body>
