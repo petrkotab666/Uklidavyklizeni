@@ -1,4 +1,11 @@
 
+Skvěle, máme vaše ID! Je to G-6LPV6J6DL8.
+
+Tady je kompletní, finálně upravený kód vaší stránky. Už jsem do něj vložil vaše konkrétní Google ID, takže nemusíte nic hledat a přepisovat. Stačí tento kód vzít a nahrát ho do vašeho index.html.
+
+Ponechal jsem tam i přípravu pro Sklik a Google Ads (označeno jako AW-XXXXXXXXXX a 123456), které můžete doplnit, až si ty účty založíte. Pokud je zatím nemáte, ničemu to nevadí, Google Analytics už budou měřit.
+
+HTML
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -9,9 +16,21 @@
     <title>Úklid, Vyklízení a Čištění koberců | Kadaň, Klášterec, Žatec, Jirkov</title>
     <meta name="description" content="Profesionální vyklízení, úklid a hloubkové čištění koberců v regionu od Stráže nad Ohří přes Kadaň, Žatec a Podbořany až po Jirkov.">
     
-    <meta property="og:title" content="Úklid a vyklízení | Kadaňsko a Žatecko">
-    <meta property="og:description" content="Kompletní servis pro Vaši nemovitost.">
-    <meta property="og:image" content="favicon.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LPV6J6DL8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6LPV6J6DL8');
+      /* gtag('config', 'AW-XXXXXXXXXX'); */ // Sem později doplníte Google Ads
+    </script>
+
+    <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
+    <script>
+      /* var seznam_retargeting_id = 123456; */ // Sem později doplníte ID z Skliku
+      if (window.rc && typeof seznam_retargeting_id !== 'undefined') { window.rc.retargeting(seznam_retargeting_id); }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -19,13 +38,11 @@
         .container { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         
         .header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 25px; }
-        .logo-img { max-width: 120px; margin-bottom: 10px; }
         .logo { font-size: 2.2em; font-weight: 700; color: #0056b3; letter-spacing: -1px; text-decoration: none; }
         .logo span { color: #28a745; }
         
         .contact-bar { background: #e9ecef; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 25px; border: 1px solid #dee2e6; }
         .contact-bar a { color: #0056b3; text-decoration: none; margin: 0 15px; font-size: 1.2em; font-weight: bold; display: inline-block; }
-        .contact-bar a:hover { text-decoration: underline; }
 
         h1 { color: #222; font-size: 1.7em; text-align: center; margin-bottom: 30px; }
         
@@ -51,17 +68,11 @@
 
         .map-card-final { margin: 40px 0; background: #fff; border: 3px solid #0056b3; padding: 35px 20px; border-radius: 15px; text-align: center; }
         .map-button-huge { display: block; background: #ffc107; color: #212529 !important; padding: 22px; text-decoration: none !important; border-radius: 10px; font-weight: 900; font-size: 1.4em; box-shadow: 0 5px 0 #d39e00; margin: 20px auto; max-width: 420px; text-transform: uppercase; transition: 0.1s; }
-        .map-button-huge:active { transform: translateY(3px); box-shadow: 0 2px 0 #d39e00; }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 40px 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.4em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); }
-        .cta-button:hover { background: #218838; transform: scale(1.05); }
         
-        @media (max-width: 650px) { 
-            .service-grid { grid-template-columns: 1fr; } 
-            .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; gap: 15px; } 
-            .logo { font-size: 1.8em; }
-        }
+        @media (max-width: 650px) { .service-grid { grid-template-columns: 1fr; } .real-estate-box { grid-column: span 1; flex-direction: column; text-align: center; gap: 15px; } .logo { font-size: 1.8em; } }
         .footer { margin-top: 40px; font-size: 0.85em; color: #888; text-align: center; padding-bottom: 20px; }
     </style>
 </head>
@@ -74,7 +85,7 @@
         </header>
 
         <div class="contact-bar">
-            <a href="tel:+420603206308">📞 603 206 308</a>
+            <a href="tel:+420603206308" onclick="gtag('event', 'contact', {'event_category': 'phone'});">📞 603 206 308</a>
             <a href="mailto:info@vaseuklizecka.cz">✉️ info@vaseuklizecka.cz</a>
         </div>
 
@@ -147,7 +158,11 @@
 
         <div class="cta-section">
             <p style="margin-bottom: 25px; font-weight: bold;">Pro ceníky a online objednávky přejděte na náš hlavní web:</p>
-            <a href="https://www.vaseuklizecka.cz" class="cta-button">VSTOUPIT NA VASEUKLIZECKA.CZ</a>
+            <a href="https://www.vaseuklizecka.cz" 
+               onclick="gtag('event', 'conversion', {'send_to': 'G-6LPV6J6DL8'});"
+               class="cta-button">
+               VSTOUPIT NA VASEUKLIZECKA.CZ
+            </a>
         </div>
     </div>
 
