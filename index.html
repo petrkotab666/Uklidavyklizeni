@@ -37,40 +37,34 @@
         .real-estate-box { background: #fff3cd; border: 1px solid #ffeeba; padding: 20px; border-radius: 10px; grid-column: span 2; display: flex; align-items: center; justify-content: space-between; }
         .real-estate-box a { color: #856404; font-weight: bold; text-decoration: underline; }
 
-        /* Styl pro vizuální mapu */
-        .map-box { 
+        /* Moderní mapová vizitka (CSS místo obrázku) */
+        .map-card-final { 
             margin: 40px 0; 
-            background: #eef4fb; 
-            border: 2px solid #0056b3; 
-            border-radius: 10px; 
-            padding: 20px; 
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%); 
+            color: white; 
+            padding: 40px 20px; 
+            border-radius: 12px; 
             text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,86,179,0.3);
+            border: 1px solid #004494;
         }
-        .map-placeholder { 
-            background-color: #ddd; 
-            height: 250px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 8px; 
-            margin-bottom: 15px;
-            background-image: url('https://api.mapy.cz/static/?center=13.27,50.37&zoom=10&size=800x300&markers=13.27,50.37');
-            background-size: cover;
-            background-position: center;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-        .map-button {
-            display: inline-block;
-            background: #0056b3;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+        .map-card-final h2 { margin-top: 0; font-size: 1.8em; color: #fff; }
+        .map-card-final p { font-size: 1.1em; margin-bottom: 25px; opacity: 0.9; }
+        .city-tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
+        .city-tag { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 50px; font-weight: bold; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.3); }
+        .map-button-new { 
+            display: inline-block; 
+            background: #28a745; 
+            color: white; 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1em;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .map-button:hover { background: #004494; }
+        .map-button-new:hover { background: #218838; transform: translateY(-2px); }
 
         .cta-section { background: #f8f9fa; border: 2px dashed #cbd3da; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
         .cta-button { display: inline-block; background: #28a745; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3em; transition: 0.3s; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
@@ -150,13 +144,19 @@
             </div>
         </div>
 
-        <div class="map-box">
-            <h3>Naše oblast působení</h3>
-            <p>Od Stráže nad Ohří přes Kadaň až po Jirkov, Žatec a Podbořany.</p>
-            <a href="https://mapy.cz/zakladni?vlastni-body&x=13.3159931&y=50.3768788&z=10&ut=Oblast%20p%C5%AFsoben%C3%AD&uc=9fW5vxVjL-9fcQ3xV8hA9f5OExVh649eTebxVg4s&ud=Kada%C5%88" target="_blank">
-                <div class="map-placeholder"></div>
-            </a>
-            <a href="https://mapy.cz/zakladni?vlastni-body&x=13.3159931&y=50.3768788&z=10&ut=Oblast%20p%C5%AFsoben%C3%AD&uc=9fW5vxVjL-9fcQ3xV8hA9f5OExVh649eTebxVg4s&ud=Kada%C5%88" target="_blank" class="map-button">Klikněte pro zobrazení interaktivní mapy</a>
+        <div class="map-card-final">
+            <h2>Naše oblast působení</h2>
+            <p>Přijedeme za Vámi kamkoliv v tomto regionu:</p>
+            <div class="city-tag-container">
+                <span class="city-tag">Stráž nad Ohří</span>
+                <span class="city-tag">Klášterec nad Ohří</span>
+                <span class="city-tag">Kadaň</span>
+                <span class="city-tag">Chomutov</span>
+                <span class="city-tag">Jirkov</span>
+                <span class="city-tag">Žatec</span>
+                <span class="city-tag">Podbořany</span>
+            </div>
+            <a href="https://mapy.cz/zakladni?q=Kada%C5%88%20a%20okol%C3%AD" target="_blank" class="map-button-new">🗺️ OTEVŘÍT INTERAKTIVNÍ MAPU</a>
         </div>
 
         <div class="cta-section">
